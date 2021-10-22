@@ -1,0 +1,16 @@
+1. npm init -y => package.json
+2. install express using npm i express
+3. create file index.js
+4. if using es6 module use "type":"module" in package.json
+5. created index.js
+6. added start-script as nodemon index
+7. add routes
+8. created separate folder called routes and within that made a file users.js common for all the routes
+9. In users.js first import express and then call express.Router() and store it inside a variable.
+10. all the different requests for the different routes will be handled in users.js and this will be exported.
+11. In index.js first import the router and then app.use(BASE_PATH, router)
+12. request are being sent by postman
+13. In postman first go to workspace and then myworkspace and then press + on the screen upper-left.
+14. For GET request enter the url and then submit
+15. for POST request go to the body in the middle section for request and then to raw and then change the data type as json.
+16. req.body and req.params are important properties

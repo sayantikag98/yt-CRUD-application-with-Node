@@ -1,0 +1,18 @@
+{
+  "name": "yt_crud_application_with_node_and_express_by_javascript_mastery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
+  }
+}
