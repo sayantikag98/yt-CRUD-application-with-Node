@@ -10,7 +10,7 @@ const PORT = 3000;
 app.use(bodyParser.json()); // to use .json data for the application
 // app.use() is a middleware
 
-app.use("/users", routes);
+app.use("/users", routes); // "/users" route will be dealt in the users.js in route folder
 
 app.get("/", (req, res) => res.send("Home Page"));
 

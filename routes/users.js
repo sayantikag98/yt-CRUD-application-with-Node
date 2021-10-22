@@ -1,5 +1,5 @@
 import express from "express";
-import {getAllUsers, addUser, getParticularUser, deleteUser, updateUser} from "../controllers/users.js" // filename should have .js extension
+import {getAllUsers, addUser, getParticularUser, deleteUser, updateUserWithPATCH, updateUserWithPUT} from "../controllers/users.js" // filename should have .js extension
 
 // all routes in here are starting with /users
 const router = express.Router();
@@ -24,7 +24,18 @@ router.delete("/:id", deleteUser);
     PUT completely overwrites or changes everything
     PATCH updates certain info as provided and does not overwrite
 */
-router.patch("/:id", updateUser);
+
+/*
+why does updating info in user the object updates the users array in PATCH request???
+Because it's an array of Objects (not primitives), the returned value will be a reference
+to the original object, so modifying a property of the returned object, 
+will update the property of the object that it is referencing.
+-- Reference: https://stackoverflow.com/questions/24304383/javascript-return-reference-to-array-item 
+*/
+router.patch("/:id", updateUserWithPATCH);
+
+// Overwriting information about an user with the given id with the PUT request
+router.put("/:id", updateUserWithPUT);
 
 
 export default router;
