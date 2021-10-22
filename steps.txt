@@ -14,3 +14,5 @@
 14. For GET request enter the url and then submit
 15. for POST request go to the body in the middle section for request and then to raw and then change the data type as json.
 16. req.body and req.params are important properties
+17. create a folder called controllers and in it create users.js wherein your logic for 
+    the different request method can be put 
